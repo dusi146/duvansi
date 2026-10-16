@@ -1,0 +1,9 @@
+{
+  "name": "duvansi-spatial-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "dev": "vite --host 127.0.0.1 --port 5174 --strictPort", "build": "vite build", "preview": "vite preview --host 127.0.0.1 --port 4174" },
+  "dependencies": { "gsap": "^3.12.7", "lenis": "^1.1.20", "three": "^0.177.0" },
+  "devDependencies": { "vite": "^6.4.3" }
+}
