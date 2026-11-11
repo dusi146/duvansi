@@ -1,1 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780"><defs><radialGradient id="bg" cx="20%" cy="10%" r="100%"><stop stop-color="#ff9666"/><stop offset=".6" stop-color="#f2633c"/><stop offset="1" stop-color="#d54b2a"/></radialGradient></defs><path fill="url(#bg)" d="M0 0h1200v780H0z"/><g fill="#181b16" transform="translate(225 390) rotate(-18)"><rect x="-46" y="-235" width="92" height="470" rx="46"/><rect x="-46" y="-235" width="92" height="470" rx="46" transform="rotate(45)"/><rect x="-46" y="-235" width="92" height="470" rx="46" transform="rotate(90)"/><rect x="-46" y="-235" width="92" height="470" rx="46" transform="rotate(135)"/><circle r="47" fill="#f67a4c"/></g><g fill="#181b16" font-family="Arial,sans-serif"><text x="56" y="68" font-size="17" letter-spacing="2">VÉLO® / CREATIVE STUDIO</text><text x="1144" y="68" text-anchor="end" font-size="17" letter-spacing="2">IDEAS IN MOTION.</text><text x="500" y="475" font-size="250" font-weight="700" letter-spacing="-20">vélo.</text><text x="530" y="535" font-size="25" letter-spacing="1">An identity built to move.</text><text x="56" y="726" font-size="15" letter-spacing="2">STRATEGY / IDENTITY / CHARACTER</text><text x="1144" y="726" text-anchor="end" font-size="15" letter-spacing="2">2026 ↗</text></g><path d="M56 680h1088" stroke="#181b16" stroke-opacity=".25"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+  <defs>
+    <radialGradient id="v-stage" cx="58%" cy="46%" r="72%">
+      <stop offset="0%" stop-color="#2a120a"/>
+      <stop offset="45%" stop-color="#120908"/>
+      <stop offset="100%" stop-color="#060708"/>
+    </radialGradient>
+    <radialGradient id="v-flare" cx="62%" cy="48%" r="42%">
+      <stop offset="0%" stop-color="#ff5e2b" stop-opacity="0.72"/>
+      <stop offset="48%" stop-color="#f2633c" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f2633c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="v-blade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff4ec"/>
+      <stop offset="28%" stop-color="#ff7a45"/>
+      <stop offset="68%" stop-color="#d93814"/>
+      <stop offset="100%" stop-color="#1a0906"/>
+    </linearGradient>
+    <linearGradient id="v-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.24"/>
+      <stop offset="50%" stop-color="#ff7a45" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#d5ff4f" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="v-type" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#b8aea8"/>
+    </linearGradient>
+    <pattern id="v-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+      <circle cx="60" cy="60" r="1" fill="#ff7a45" fill-opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="780" fill="url(#v-stage)"/>
+  <rect width="1200" height="780" fill="url(#v-grid)"/>
+  <rect width="1200" height="780" fill="url(#v-flare)"/>
+
+  <!-- Perspective horizon & kinetic speed lines -->
+  <g stroke="#ff7a45" stroke-opacity="0.18" stroke-width="1">
+    <line x1="0" y1="390" x2="1200" y2="390"/>
+    <line x1="740" y1="0" x2="740" y2="780"/>
+    <circle cx="740" cy="390" r="290" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+    <circle cx="740" cy="390" r="225" fill="none" stroke="#ff7a45" stroke-opacity="0.22" stroke-dasharray="6 6"/>
+    <circle cx="740" cy="390" r="152" fill="none" stroke="#d5ff4f" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- 3D Kinetic Turbine / Vortex Sculpture -->
+  <g transform="translate(740 390) rotate(-14)">
+    <g opacity="0.88">
+      <path d="M-28 -240 C35 -240 62 -110 28 0 C-6 110 -35 240 28 240 C-35 240 -62 110 -28 0 C6 -110 35 -240 -28 -240 Z" fill="url(#v-blade)"/>
+      <path d="M-28 -240 C35 -240 62 -110 28 0 C-6 110 -35 240 28 240 C-35 240 -62 110 -28 0 C6 -110 35 -240 -28 -240 Z" fill="url(#v-blade)" transform="rotate(45)"/>
+      <path d="M-28 -240 C35 -240 62 -110 28 0 C-6 110 -35 240 28 240 C-35 240 -62 110 -28 0 C6 -110 35 -240 -28 -240 Z" fill="url(#v-blade)" transform="rotate(90)"/>
+      <path d="M-28 -240 C35 -240 62 -110 28 0 C-6 110 -35 240 28 240 C-35 240 -62 110 -28 0 C6 -110 35 -240 -28 -240 Z" fill="url(#v-blade)" transform="rotate(135)"/>
+    </g>
+    <!-- Glass prism overlay ring -->
+    <circle r="118" fill="url(#v-glass)" stroke="#ffffff" stroke-opacity="0.38" stroke-width="1.2"/>
+    <circle r="48" fill="#090b0c" stroke="#ff7a45" stroke-width="2"/>
+    <circle r="12" fill="#d5ff4f"/>
+  </g>
+
+  <!-- Editorial Glass HUD Card Left -->
+  <g transform="translate(64 136)">
+    <rect width="470" height="508" rx="4" fill="#0b0d0e" fill-opacity="0.64" stroke="#ffffff" stroke-opacity="0.14"/>
+    <line x1="0" y1="54" x2="470" y2="54" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="26" cy="27" r="4" fill="#ff6b35"/>
+    <text x="44" y="31" fill="#a8afa6" font-family="monospace" font-size="11" letter-spacing="2.5">[ SYS.01 // KINETIC IDENTITY ]</text>
+    <text x="444" y="31" fill="#d5ff4f" font-family="monospace" font-size="11" text-anchor="end">2026</text>
+
+    <text x="34" y="242" fill="url(#v-type)" font-family="Arial, sans-serif" font-size="148" font-weight="700" letter-spacing="-9">vélo.</text>
+    <text x="38" y="292" fill="#ff7a45" font-family="monospace" font-size="13" letter-spacing="3.5">VELOCITY IN VISUAL FORM</text>
+    <text x="38" y="346" fill="#9fa69d" font-family="Arial, sans-serif" font-size="16" letter-spacing="0.2">Modular motion language, custom variable</text>
+    <text x="38" y="372" fill="#9fa69d" font-family="Arial, sans-serif" font-size="16" letter-spacing="0.2">display typography &amp; 3D sonic branding.</text>
+
+    <line x1="34" y1="428" x2="436" y2="428" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="34" y="464" fill="#ffffff" font-family="monospace" font-size="11" letter-spacing="2">BRANDING / MOTION / WEBGL</text>
+    <text x="436" y="464" fill="#d5ff4f" font-family="monospace" font-size="11" letter-spacing="2" text-anchor="end">STUDY 01 ↗</text>
+  </g>
+
+  <!-- Outer Frame Telemetry -->
+  <g fill="#8e948b" font-family="monospace" font-size="12" letter-spacing="2.5">
+    <text x="64" y="56">VÉLO® CREATIVE STUDIO — SAIGON / DA NANG</text>
+    <text x="1136" y="56" text-anchor="end">FRAME // 120 FPS</text>
+    <text x="64" y="736">01 — AN IDENTITY BUILT TO MOVE DIFFERENTLY</text>
+    <text x="1136" y="736" fill="#ff7a45" text-anchor="end">[ INTERACTIVE EDITION ]</text>
+  </g>
+</svg>

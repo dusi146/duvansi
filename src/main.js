@@ -33,7 +33,7 @@ let viewportHeight=innerHeight,scrollRange=1,lastScrollY=-1,lastChapter='',lastT
 let menuOpen=false,menuPreviousFocus,savedOverflow=null,copyTimeout,introActive=true,heroEntrance,allowIntroAnchor=true;
 const introInert=new Map(),previousRestoration=history.scrollRestoration;
 const mainContent=$('#main-content'),previousBusy=mainContent.getAttribute('aria-busy');
-let activeJourney=-1,journeyAnimation;
+let activeJourney=-1,journeyAnimation,workAnimation;
 const journey=[
   {name:'FORM',title:'An idea takes shape.'},
   {name:'PERSPECTIVE',title:'Shift the way you see.'},
@@ -98,6 +98,10 @@ function setFeatured(index){
   ui.workHit.setAttribute('aria-label',`View ${project.name}`);
   ui.featuredButtons.forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.featured)===index)));
   ui.workPrev.disabled=index===0;ui.workNext.disabled=index===featured.length-1;
+  workAnimation?.kill();
+  if(enabled&&initialized){
+    workAnimation=gsap.fromTo([ui.workKind,ui.workName,ui.workDescription],{opacity:0,y:10,filter:'blur(4px)'},{opacity:1,y:0,filter:'blur(0px)',duration:.55,stagger:.045,ease:'power2.out',clearProps:'opacity,transform,filter'});
+  }
 }
 function goFeatured(index){
   index=clamp(index,0,featured.length-1);
@@ -192,7 +196,7 @@ on($('.explore-link'),'click',event=>{
 });
 function startPointer(){
   if(!fine.matches||!enabled)return;
-  const cursor=$('.custom-cursor'),label=cursor.querySelector('span');let visible=false,pointerFrame=0,pointerX=0,pointerY=0,hoverLabel='',nextLabel='';
+  const cursor=$('.custom-cursor'),label=cursor.querySelector('span');let visible=false,pointerFrame=0,pointerX=0,pointerY=0,hoverLabel='',nextLabel='',lastTarget=null;
   gsap.set(cursor,{xPercent:-50,yPercent:-50,opacity:0});
   cursor.classList.remove('is-active');label.textContent='';
   const x=gsap.quickTo(cursor,'x',{duration:.22,ease:'power3'}),y=gsap.quickTo(cursor,'y',{duration:.22,ease:'power3'});
@@ -204,7 +208,8 @@ function startPointer(){
   };
   const move=event=>{
     if(event.pointerType==='touch')return;
-    pointerX=event.clientX;pointerY=event.clientY;nextLabel=event.target.closest?.('[data-cursor]')?.dataset.cursor||'';
+    pointerX=event.clientX;pointerY=event.clientY;
+    if(event.target!==lastTarget){lastTarget=event.target;nextLabel=event.target?.closest?.('[data-cursor]')?.dataset.cursor||'';}
     if(!pointerFrame)pointerFrame=requestAnimationFrame(flushPointer);
   };
   const hide=()=>{cancelAnimationFrame(pointerFrame);pointerFrame=0;visible=false;html.classList.remove('has-cursor');gsap.set(cursor,{opacity:0});};

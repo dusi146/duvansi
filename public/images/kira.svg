@@ -1,1 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#2642d3"/><stop offset=".6" stop-color="#4469fb"/><stop offset="1" stop-color="#1929ac"/></linearGradient><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0v30" fill="none" stroke="#bacbff" stroke-width=".5" opacity=".17"/></pattern></defs><path fill="url(#bg)" d="M0 0h1200v780H0z"/><path fill="url(#grid)" d="M0 0h1200v780H0z"/><g fill="none" stroke="#d5ff4f" transform="translate(890 385)"><circle r="295" stroke-width="2"/><circle r="275" stroke-opacity=".5"/><circle r="250" stroke-opacity=".5"/><circle r="225" stroke-opacity=".5"/><circle r="195" stroke-opacity=".6"/><circle r="160" stroke-opacity=".6"/><circle r="120" stroke-opacity=".6"/><circle r="75" stroke-width="9"/></g><path d="M0 565 1200 300v220L0 780z" fill="#d5ff4f"/><text x="46" y="463" font-family="Arial,sans-serif" font-size="270" font-weight="900" letter-spacing="-24" fill="#e9efff">KIRA</text><g font-family="Arial" fill="#d5ff4f" font-size="16" letter-spacing="2"><text x="56" y="68">KIRA / INDEPENDENT SOUND</text><text x="1144" y="68" text-anchor="end">A NEW FREQUENCY.</text></g><g font-family="Arial" fill="#1e35b6" font-size="17" letter-spacing="2" transform="translate(95 660) rotate(-12)"><text>FEEL THE FREQUENCY. / FOLLOW THE SOUND.</text></g><text x="1144" y="726" text-anchor="end" font-family="Arial" fill="#d5ff4f" font-size="15" letter-spacing="2">2025 ↗</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+  <defs>
+    <radialGradient id="k-stage" cx="68%" cy="48%" r="76%">
+      <stop offset="0%" stop-color="#192b8c"/>
+      <stop offset="48%" stop-color="#0a1138"/>
+      <stop offset="100%" stop-color="#050712"/>
+    </radialGradient>
+    <radialGradient id="k-glow" cx="75%" cy="46%" r="38%">
+      <stop offset="0%" stop-color="#5ce1ff" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#d5ff4f" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#3156ef" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="k-acid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d5ff4f"/>
+      <stop offset="55%" stop-color="#5ce1ff"/>
+      <stop offset="100%" stop-color="#a894ff"/>
+    </linearGradient>
+    <pattern id="k-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#7ea0ff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="780" fill="url(#k-stage)"/>
+  <rect width="1200" height="780" fill="url(#k-grid)"/>
+  <rect width="1200" height="780" fill="url(#k-glow)"/>
+
+  <!-- 3D Acoustic Frequency Torus / Visualizer -->
+  <g transform="translate(810 388)" fill="none">
+    <circle r="280" stroke="#5ce1ff" stroke-opacity="0.18" stroke-width="1"/>
+    <circle r="245" stroke="#d5ff4f" stroke-opacity="0.28" stroke-dasharray="10 6"/>
+    <circle r="210" stroke="#ffffff" stroke-opacity="0.15"/>
+    <circle r="175" stroke="url(#k-acid)" stroke-width="2.5" stroke-opacity="0.75"/>
+    <circle r="140" stroke="#5ce1ff" stroke-opacity="0.4" stroke-dasharray="3 5"/>
+    <circle r="105" stroke="#d5ff4f" stroke-width="1.5" stroke-opacity="0.65"/>
+    <circle r="68" fill="#060919" stroke="url(#k-acid)" stroke-width="4"/>
+    <circle r="16" fill="#d5ff4f"/>
+    <!-- Frequency waveform ring -->
+    <path d="M-260 0 Q-195 -85 -130 0 T0 0 T130 0 T260 0" stroke="#d5ff4f" stroke-width="2" opacity="0.8"/>
+    <path d="M-260 0 Q-195 75 -130 0 T0 0 T130 0 T260 0" stroke="#5ce1ff" stroke-width="1.5" opacity="0.7"/>
+  </g>
+
+  <!-- Editorial Brutalist Panel Left -->
+  <g transform="translate(64 136)">
+    <rect width="480" height="508" rx="4" fill="#060918" fill-opacity="0.68" stroke="#8aa8ff" stroke-opacity="0.18"/>
+    <line x1="0" y1="54" x2="480" y2="54" stroke="#8aa8ff" stroke-opacity="0.12"/>
+    <circle cx="26" cy="27" r="4" fill="#5ce1ff"/>
+    <text x="44" y="31" fill="#9cb0e8" font-family="monospace" font-size="11" letter-spacing="2.5">[ SYS.03 // SONIC &amp; MOTION ID ]</text>
+    <text x="452" y="31" fill="#d5ff4f" font-family="monospace" font-size="11" text-anchor="end">2025</text>
+
+    <text x="32" y="236" fill="#ffffff" font-family="Arial, sans-serif" font-size="152" font-weight="900" letter-spacing="-10">KIRA</text>
+    <text x="38" y="288" fill="#d5ff4f" font-family="monospace" font-size="13" letter-spacing="3.5">FEEL THE FREQUENCY // 140 BPM</text>
+    <text x="38" y="344" fill="#9fb0dc" font-family="Arial, sans-serif" font-size="16">Audio-reactive identity system, generative</text>
+    <text x="38" y="370" fill="#9fb0dc" font-family="Arial, sans-serif" font-size="16">sleeve art &amp; live stage visuals for Kira Records.</text>
+
+    <line x1="34" y1="428" x2="446" y2="428" stroke="#8aa8ff" stroke-opacity="0.14"/>
+    <text x="34" y="464" fill="#ffffff" font-family="monospace" font-size="11" letter-spacing="2">MOTION DESIGN / AUDIO VISUAL</text>
+    <text x="446" y="464" fill="#5ce1ff" font-family="monospace" font-size="11" letter-spacing="2" text-anchor="end">STUDY 03 ↗</text>
+  </g>
+
+  <g fill="#8599d4" font-family="monospace" font-size="12" letter-spacing="2.5">
+    <text x="64" y="56">KIRA RECORDS — INDEPENDENT SOUND LAB</text>
+    <text x="1136" y="56" text-anchor="end">AUDIO // REACTIVE</text>
+    <text x="64" y="736">03 — VISUALIZING SOUND THROUGH GENERATIVE MOTION</text>
+    <text x="1136" y="736" fill="#d5ff4f" text-anchor="end">[ INTERACTIVE EDITION ]</text>
+  </g>
+</svg>

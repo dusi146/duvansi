@@ -1,1 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e5e1d1"/><stop offset="1" stop-color="#aeb69b"/></linearGradient><linearGradient id="glass"><stop stop-color="#747e54"/><stop offset=".15" stop-color="#adb88a"/><stop offset=".4" stop-color="#d1d7b1"/><stop offset=".75" stop-color="#a7b37b"/><stop offset="1" stop-color="#788952"/></linearGradient><linearGradient id="cap"><stop stop-color="#272e1d"/><stop offset=".35" stop-color="#62684d"/><stop offset=".8" stop-color="#303a23"/><stop offset="1" stop-color="#1b2516"/></linearGradient><filter id="s"><feGaussianBlur stdDeviation="22"/></filter><linearGradient id="light" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><path fill="url(#bg)" d="M0 0h1200v780H0z"/><path d="M850 70l350 150v460l-540-360z" fill="#5f6d47" opacity=".09"/><ellipse cx="825" cy="658" rx="172" ry="33" fill="#3c4a28" opacity=".25" filter="url(#s)"/><g transform="translate(730 172) rotate(9 105 220)"><rect x="17" width="176" height="92" rx="9" fill="url(#cap)"/><path d="M36 85h138q38 0 38 52v292q0 30-30 30H30q-30 0-30-30V137q0-52 36-52" fill="url(#glass)"/><path d="M30 120q15-15 35-15h4v320H30z" fill="url(#light)"/><g fill="#344126" text-anchor="middle"><text x="106" y="213" font-family="Georgia,serif" font-size="64" letter-spacing="-4">nōka</text><path d="M48 243h116" stroke="#63734a" stroke-width="1"/><text x="106" y="282" font-family="Arial" font-size="10" letter-spacing="2">THE DAILY ESSENTIAL</text><text x="106" y="306" font-family="Arial" font-size="8" letter-spacing="2">RESTORE / RENEW</text><text x="106" y="410" font-family="Arial" font-size="8" letter-spacing="1">50 ML / 1.69 FL.OZ.</text></g></g><g fill="#3c4930"><text x="56" y="68" font-family="Arial" font-size="17" letter-spacing="2">NŌKA / A DAILY RITUAL.</text><text x="1144" y="68" font-family="Arial" font-size="17" letter-spacing="2" text-anchor="end">01 / 03</text><text x="75" y="398" font-family="Georgia,serif" font-size="162" letter-spacing="-10">nōka.</text><text x="85" y="457" font-family="Georgia,serif" font-size="34" font-style="italic">Less, but so much more.</text><text x="56" y="726" font-family="Arial" font-size="15" letter-spacing="2">A QUIETER KIND OF BEAUTY.</text><text x="1144" y="726" font-family="Arial" font-size="15" letter-spacing="2" text-anchor="end">NATURALLY YOURS. ↗</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+  <defs>
+    <radialGradient id="n-stage" cx="65%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#262e20"/>
+      <stop offset="52%" stop-color="#111610"/>
+      <stop offset="100%" stop-color="#070907"/>
+    </radialGradient>
+    <radialGradient id="n-halo" cx="72%" cy="46%" r="36%">
+      <stop offset="0%" stop-color="#d5ff4f" stop-opacity="0.32"/>
+      <stop offset="55%" stop-color="#9cb080" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#9cb080" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="n-bottle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f4e8" stop-opacity="0.88"/>
+      <stop offset="28%" stop-color="#b9c69f" stop-opacity="0.78"/>
+      <stop offset="65%" stop-color="#6b7a53" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#28311e" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="n-cap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#141911"/>
+      <stop offset="40%" stop-color="#47523b"/>
+      <stop offset="100%" stop-color="#0e120c"/>
+    </linearGradient>
+    <pattern id="n-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#e2e8d8" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="780" fill="url(#n-stage)"/>
+  <rect width="1200" height="780" fill="url(#n-grid)"/>
+  <rect width="1200" height="780" fill="url(#n-halo)"/>
+
+  <!-- Botanical Optical Rings -->
+  <g transform="translate(815 390)" fill="none">
+    <circle r="275" stroke="#d5ff4f" stroke-opacity="0.14"/>
+    <circle r="215" stroke="#ffffff" stroke-opacity="0.1" stroke-dasharray="4 8"/>
+    <ellipse rx="240" ry="92" transform="rotate(-24)" stroke="#c5d1b0" stroke-opacity="0.24" stroke-width="1.2"/>
+    <ellipse rx="240" ry="92" transform="rotate(36)" stroke="#d5ff4f" stroke-opacity="0.18" stroke-width="1"/>
+  </g>
+
+  <!-- 3D Frosted Glass Serum Monolith -->
+  <g transform="translate(715 148) rotate(6 100 240)">
+    <rect x="58" y="-8" width="84" height="58" rx="8" fill="url(#n-cap)" stroke="#ffffff" stroke-opacity="0.2"/>
+    <rect x="36" y="44" width="128" height="70" rx="6" fill="url(#n-cap)" stroke="#ffffff" stroke-opacity="0.18"/>
+    <rect x="8" y="106" width="184" height="356" rx="28" fill="url(#n-bottle)" stroke="#ffffff" stroke-opacity="0.45" stroke-width="1.5"/>
+    <rect x="22" y="122" width="26" height="324" rx="12" fill="#ffffff" fill-opacity="0.28"/>
+    <rect x="34" y="182" width="132" height="196" rx="4" fill="#0d120b" fill-opacity="0.76" stroke="#d5ff4f" stroke-opacity="0.32"/>
+    <text x="100" y="248" fill="#f3f6ec" font-family="Georgia, serif" font-size="48" text-anchor="middle" letter-spacing="-2">nōka</text>
+    <line x1="56" y1="268" x2="144" y2="268" stroke="#d5ff4f" stroke-opacity="0.45"/>
+    <text x="100" y="296" fill="#b7c2a6" font-family="monospace" font-size="9" text-anchor="middle" letter-spacing="2.5">BOTANICAL SERUM</text>
+    <text x="100" y="318" fill="#8b967b" font-family="monospace" font-size="8" text-anchor="middle" letter-spacing="2">01 // CELLULAR CALM</text>
+    <text x="100" y="354" fill="#d5ff4f" font-family="monospace" font-size="8" text-anchor="middle" letter-spacing="1.5">50 ML — 1.69 FL.OZ</text>
+  </g>
+
+  <!-- Editorial Architecture Panel Left -->
+  <g transform="translate(64 136)">
+    <rect width="486" height="508" rx="4" fill="#0b0f0a" fill-opacity="0.62" stroke="#e2e8d8" stroke-opacity="0.14"/>
+    <line x1="0" y1="54" x2="486" y2="54" stroke="#e2e8d8" stroke-opacity="0.1"/>
+    <circle cx="26" cy="27" r="4" fill="#d5ff4f"/>
+    <text x="44" y="31" fill="#a8b39b" font-family="monospace" font-size="11" letter-spacing="2.5">[ SYS.02 // DIGITAL FLAGSHIP ]</text>
+    <text x="458" y="31" fill="#d5ff4f" font-family="monospace" font-size="11" text-anchor="end">2025</text>
+
+    <text x="36" y="228" fill="#f2f5ec" font-family="Georgia, serif" font-size="138" letter-spacing="-6">nōka.</text>
+    <text x="40" y="282" fill="#c2ceb0" font-family="Georgia, serif" font-style="italic" font-size="28">A quieter kind of beauty.</text>
+    <text x="40" y="340" fill="#95a088" font-family="Arial, sans-serif" font-size="16">Tactile e-commerce architecture, spatial</text>
+    <text x="40" y="366" fill="#95a088" font-family="Arial, sans-serif" font-size="16">product inspection &amp; ritual storytelling.</text>
+
+    <line x1="36" y1="428" x2="450" y2="428" stroke="#e2e8d8" stroke-opacity="0.12"/>
+    <text x="36" y="464" fill="#f2f5ec" font-family="monospace" font-size="11" letter-spacing="2">E-COMMERCE / ART DIRECTION</text>
+    <text x="450" y="464" fill="#d5ff4f" font-family="monospace" font-size="11" letter-spacing="2" text-anchor="end">STUDY 02 ↗</text>
+  </g>
+
+  <g fill="#8c9681" font-family="monospace" font-size="12" letter-spacing="2.5">
+    <text x="64" y="56">NŌKA SKINCARE — EDITORIAL COMMERCE</text>
+    <text x="1136" y="56" text-anchor="end">SENSORY // WEBGL</text>
+    <text x="64" y="736">02 — MINIMALIST FORMULATION &amp; DIGITAL RITUAL</text>
+    <text x="1136" y="736" fill="#d5ff4f" text-anchor="end">[ INTERACTIVE EDITION ]</text>
+  </g>
+</svg>

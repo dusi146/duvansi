@@ -16,14 +16,15 @@ const simulation=`
     float ink=max(0.,field.b-.0035*uDt)*pow(.971,uDt);
     vec2 scale=vec2(uAspect,1.);
     float distanceToStroke=segment(vUv*scale,uPrevious*scale,uPointer*scale);
-    float radius=.048+min(length(uVelocity),1.)*.032+uBurst*.018;
-    float splat=exp(-pow(distanceToStroke/radius,2.)*2.1)*uStrength;
+    float radius=.024+min(length(uVelocity),1.)*.018+uBurst*.012;
+    float dRatio=distanceToStroke/radius;
+    float splat=exp(-dRatio*dRatio*3.6)*uStrength;
     vec2 relative=(vUv-uPointer)*scale;
     vec2 tangent=vec2(-relative.y,relative.x)/max(length(relative),.018);
     float turbulence=sin(vUv.x*31.+uTime*1.7)*cos(vUv.y*27.-uTime*1.2);
-    velocity+=splat*(uVelocity*.37+tangent*(.11+turbulence*.06)+relative*uBurst*2.);
+    velocity+=splat*(uVelocity*.36+tangent*(.09+turbulence*.04)+relative*uBurst*1.4);
     velocity=clamp(velocity,vec2(-.95),vec2(.95));
-    ink=clamp(ink+splat*.52,0.,1.);
+    ink=clamp(ink+splat*.48,0.,1.);
     gl_FragColor=vec4(velocity*.5+.5,ink,1.);
   }
 `;
@@ -33,25 +34,33 @@ const composite=`
   uniform vec4 uRipples[4];
   void main(){
     vec4 flow=texture2D(uField,vUv);vec2 velocity=(flow.rg-.5)*2.;float ink=flow.b;
-    vec2 displacement=velocity*ink*.035;
+    vec2 displacement=velocity*ink*.022;
     float rings=0.;
     for(int i=0;i<4;i++){
-      vec4 ripple=uRipples[i];vec2 delta=(vUv-ripple.xy)*vec2(uAspect,1.);
-      float distanceToTap=length(delta);float age=ripple.z;
-      float radius=age*.28;
-      float ring=exp(-pow((distanceToTap-radius)/.0055,2.))*pow(max(0.,1.-age),2.)*ripple.w;
-      rings+=ring;displacement+=normalize(delta+vec2(.0001))*ring*.004;
+      vec4 ripple=uRipples[i];
+      if(ripple.w>.001 && ripple.z<1.){
+        vec2 delta=(vUv-ripple.xy)*vec2(uAspect,1.);
+        float distanceToTap=length(delta);float age=ripple.z;
+        float rDiff=(distanceToTap-age*.13)/.0026;
+        float fade=1.-age;
+        float ring=exp(-rDiff*rDiff)*(fade*fade)*ripple.w;
+        rings+=ring;displacement+=normalize(delta+vec2(.0001))*ring*.0022;
+      }
     }
     vec2 uv=clamp(vUv+displacement,vec2(.001),vec2(.999));
-    float aberration=ink*min(length(velocity),1.)*.006;
-    vec3 colour=vec3(texture2D(uScene,uv+vec2(aberration,0.)).r,texture2D(uScene,uv).g,texture2D(uScene,uv-vec2(aberration,0.)).b);
-    float folds=.5+.5*sin(ink*24.+velocity.x*8.-velocity.y*11.);
-    vec3 violet=vec3(.32,.12,.75);
-    vec3 iridescence=mix(uAccent,violet,clamp(.5+velocity.y*.7,0.,1.));
-    float veil=ink*(.18+folds*.20);
-    colour=mix(colour,colour*.73+iridescence*.52,veil*(1.-uLight*.55));
-    colour+=iridescence*(pow(ink,1.8)*folds*.19+rings*.17)*(1.-uLight*.68);
-    colour=mix(colour,colour-vec3(.035)*ink*uLight,clamp(uLight,0.,1.));
+    float aberration=ink*min(length(velocity),1.)*.0022;
+    vec3 colour=aberration>.00008
+      ? vec3(texture2D(uScene,uv+vec2(aberration,0.)).r,texture2D(uScene,uv).g,texture2D(uScene,uv-vec2(aberration,0.)).b)
+      : texture2D(uScene,uv).rgb;
+    if(ink>.001 || rings>.001){
+      float folds=.5+.5*sin(ink*24.+velocity.x*8.-velocity.y*11.);
+      vec3 violet=vec3(.32,.12,.75);
+      vec3 iridescence=mix(uAccent,violet,clamp(.5+velocity.y*.7,0.,1.));
+      float veil=ink*(.05+folds*.06);
+      colour=mix(colour,colour*.88+iridescence*.24,veil*(1.-uLight*.65));
+      colour+=iridescence*(ink*ink*folds*.085+rings*.09)*(1.-uLight*.72);
+      colour=mix(colour,colour-vec3(.02)*ink*uLight,clamp(uLight,0.,1.));
+    }
     gl_FragColor=vec4(max(colour,vec3(0.)),1.);
     #include <colorspace_fragment>
   }
